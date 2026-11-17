@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tabish Khan | SEO Consultant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#7357F6;--blue:#2878F0;--coral:#FF746C;--yellow:#FFD966;--mint:#77D9B1;
+  --navy:#17233B;--bg:#FAF9F6;--card:#FFFFFF;--text:#3B4660;--muted:#6B7590;--line:#E8E5F3;
+  --tint:#F1EEFE;--shadow:0 8px 28px rgba(23,35,59,.08);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){color-scheme:dark;--bg:#12182A;--card:#1B2440;--navy:#F4F5FA;--text:#C5CBDD;--muted:#9AA3BD;--line:#2B3556;--tint:#1E2548;--shadow:0 8px 28px rgba(0,0,0,.35)}
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#12182A;--card:#1B2440;--navy:#F4F5FA;--text:#C5CBDD;--muted:#9AA3BD;--line:#2B3556;--tint:#1E2548;--shadow:0 8px 28px rgba(0,0,0,.35)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:Sora,"DM Sans",system-ui,sans-serif;color:var(--navy);margin:0;line-height:1.15;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.alt{background:var(--card)}
+h2{font-size:clamp(28px,4vw,40px);font-weight:700;margin-bottom:14px}
+.lead{max-width:620px;color:var(--muted);margin:0 0 44px}
+.bar{display:block;width:56px;height:6px;border-radius:6px;background:linear-gradient(90deg,var(--purple),var(--blue));margin-bottom:18px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{font:700 22px Sora,sans-serif;color:var(--navy);display:flex;align-items:center;gap:10px}
+.logo i{width:12px;height:12px;border-radius:50%;background:var(--coral);box-shadow:16px 0 0 var(--yellow),32px 0 0 var(--mint);margin-right:36px}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav a{font-weight:500;font-size:15.5px;color:var(--text);padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--purple);border-color:var(--purple)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;border-radius:999px;font-weight:600;font-size:16px;border:2px solid var(--purple);background:var(--purple);color:#fff;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(115,87,246,.35)}
+.btn.ghost{background:transparent;color:var(--purple)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* hero */
+.hero{padding:72px 0 96px;background:radial-gradient(900px 420px at 85% -10%,var(--tint),transparent 70%)}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(34px,5.2vw,56px);font-weight:800;margin-bottom:22px}
+.hero p{font-size:19px;max-width:540px;margin:0 0 32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.visual{position:relative;max-width:520px;margin-left:auto;width:100%}
+.win{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.win .top{display:flex;gap:7px;padding:14px 16px;border-bottom:1px solid var(--line);align-items:center}
+.win .top b{width:10px;height:10px;border-radius:50%}
+.search{margin-left:12px;flex:1;height:26px;border-radius:13px;background:var(--tint);display:flex;align-items:center;padding:0 12px;font-size:13px;color:var(--muted)}
+.win .body{padding:22px;display:grid;gap:14px}
+.res{display:grid;gap:6px;padding:12px 14px;border-radius:12px;background:var(--bg)}
+.res span{display:block;height:8px;border-radius:5px;background:var(--line)}
+.res .t{height:11px;width:62%;background:var(--blue)}
+.res.hl .t{background:var(--purple)}
+.bars{display:flex;align-items:flex-end;gap:10px;height:82px;padding:0 4px}
+.bars i{flex:1;border-radius:8px 8px 3px 3px}
+.chip{position:absolute;padding:9px 16px;border-radius:999px;font:600 13.5px Sora,sans-serif;color:var(--navy);box-shadow:var(--shadow);border:1px solid rgba(23,35,59,.06)}
+.c1{top:-16px;left:-22px;background:var(--yellow)}
+.c2{top:78px;right:-18px;background:var(--mint)}
+.c3{bottom:84px;left:-26px;background:var(--coral);color:#fff}
+.c4{bottom:-16px;right:20px;background:var(--blue);color:#fff}
+:root[data-theme="dark"] .c1,:root[data-theme="dark"] .c2{color:#17233B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .c1,:root:not([data-theme="light"]) .c2{color:#17233B}}
+
+/* cards */
+.cards{display:grid;gap:22px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow)}
+.alt .card{background:var(--bg);box-shadow:none}
+.card h3{font-size:20px;margin:16px 0 8px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center}
+.ico svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.p{background:var(--purple)}.b{background:var(--blue)}.c{background:var(--coral)}.y{background:var(--yellow)}.m{background:var(--mint)}
+.y svg,.m svg{stroke:#17233B}
+ul.tick{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+ul.tick li{position:relative;padding-left:24px;font-size:15.5px;color:var(--text)}
+ul.tick li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:3px;background:var(--mint)}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+.about p{margin:0 0 16px}
+.edu{display:inline-block;margin-top:6px;padding:8px 16px;border-radius:999px;background:var(--tint);font-weight:600;font-size:15px;color:var(--purple)}
+.hi{display:grid;gap:16px}
+.hi .card{display:flex;gap:16px;align-items:center;padding:20px}
+.hi h3{margin:0;font-size:17px}
+
+/* projects */
+.tag{display:inline-block;padding:5px 12px;border-radius:999px;font:600 12.5px Sora,sans-serif;color:var(--navy)}
+.cover{height:120px;border-radius:16px;margin-bottom:18px;display:grid;place-items:center}
+.cover svg{width:64px;height:64px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.status{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:14.5px;font-weight:600;color:var(--muted)}
+.note{margin-top:28px;padding:16px 20px;border-radius:16px;background:var(--tint);font-size:15.5px;color:var(--text)}
+
+/* experience */
+.tl{position:relative;display:grid;gap:26px;padding-left:34px}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:4px;border-radius:4px;background:linear-gradient(var(--purple),var(--mint))}
+.job{position:relative}
+.job::before{content:"";position:absolute;left:-34px;top:30px;width:22px;height:22px;border-radius:50%;background:var(--card);border:5px solid var(--purple)}
+.job.i::before{border-color:var(--coral)}
+.job h3{margin:0 0 2px}
+.org{color:var(--muted);font-weight:500;margin-bottom:6px}
+.two{columns:2;column-gap:28px}
+.two li{break-inside:avoid}
+
+/* skills */
+.skillcard{border-top:6px solid var(--purple)}
+.skillcard:nth-child(2){border-color:var(--blue)}.skillcard:nth-child(3){border-color:var(--coral)}.skillcard:nth-child(4){border-color:var(--mint)}
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.pills span{padding:7px 14px;border-radius:999px;background:var(--tint);color:var(--navy);font-size:14.5px;font-weight:500}
+.skillcard:nth-child(3) .pills span{background:color-mix(in srgb,var(--coral) 16%,transparent)}
+.skillcard:nth-child(4) .pills span{background:color-mix(in srgb,var(--mint) 24%,transparent)}
+.skillcard:nth-child(2) .pills span{background:color-mix(in srgb,var(--blue) 16%,transparent)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow)}
+.step .n{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font:700 18px Sora,sans-serif;color:#fff;margin-bottom:16px}
+.step h3{font-size:20px;margin-bottom:8px}
+.step p{margin:0;font-size:15.5px;color:var(--muted)}
+.step:not(:last-child)::after{content:"";position:absolute;right:-14px;top:48px;width:8px;height:8px;border-top:3px solid var(--line);border-right:3px solid var(--line);transform:rotate(45deg)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.cl{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+.cl li{display:flex;gap:14px;align-items:center}
+.cl .ico{width:44px;height:44px;border-radius:14px;flex:none}
+.cl small{display:block;color:var(--muted);font-size:13.5px;line-height:1.2}
+.cl b{color:var(--navy);font-weight:600;word-break:break-word}
+form{display:grid;gap:16px}
+label{font-weight:600;color:var(--navy);font-size:15px;display:grid;gap:7px}
+input,textarea{font:inherit;color:var(--navy);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:13px 16px;width:100%}
+textarea{min-height:130px;resize:vertical}
+.hint{font-size:14px;color:var(--muted);margin:0}
+
+/* footer */
+footer{background:#17233B;color:#C9D0E3;padding:56px 0 32px}
+footer .grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+footer h3{color:#fff;font-size:20px;margin-bottom:6px}
+footer h4{margin:0 0 12px;color:#fff;font:600 15px Sora,sans-serif}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15.5px}
+footer a:hover{color:var(--yellow)}
+footer .copy{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;color:#8E98B4}
+
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero .grid,.about,.contact{grid-template-columns:1fr}
+  .g3,.g2,.steps,footer .grid{grid-template-columns:1fr}
+  .step:not(:last-child)::after{display:none}
+  .visual{margin:24px auto 0;padding:0 14px}
+  .c1{left:-4px}.c3{left:-6px}.c2{right:-4px}
+  section{padding:64px 0}
+  .two{columns:1}
+  .logo i{display:none}
+}
+@media (max-width:520px){
+  .cta .btn{width:100%}
+  .btn.nav-btn{padding:0 18px;min-height:42px;font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home"><i></i>Tabish Khan</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <a class="btn nav-btn" href="#contact">Let’s Talk</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap grid">
+    <div>
+      <h1>SEO Consultant Helping Businesses Improve Organic Search Visibility</h1>
+      <p>I work on technical SEO, keyword research, on-page optimization, website audits, and SEO strategy to identify opportunities and improve website visibility in search engines.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">Explore My Work</a>
+        <a class="btn ghost" href="#contact">Contact Me</a>
+      </div>
+    </div>
+    <div class="visual" aria-hidden="true">
+      <div class="win">
+        <div class="top"><b style="background:var(--coral)"></b><b style="background:var(--yellow)"></b><b style="background:var(--mint)"></b><div class="search">search intent</div></div>
+        <div class="body">
+          <div class="res hl"><span class="t"></span><span style="width:92%"></span><span style="width:70%"></span></div>
+          <div class="res"><span class="t"></span><span style="width:85%"></span></div>
+          <div class="bars"><i style="height:35%;background:var(--mint)"></i><i style="height:55%;background:var(--yellow)"></i><i style="height:45%;background:var(--coral)"></i><i style="height:78%;background:var(--blue)"></i><i style="height:100%;background:var(--purple)"></i></div>
+        </div>
+      </div>
+      <span class="chip c1">Keyword Research</span>
+      <span class="chip c2">Website Audit</span>
+      <span class="chip c3">Technical SEO</span>
+      <span class="chip c4">Search Intent</span>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="about">
+  <div class="wrap">
+    <span class="bar"></span><h2>About Me</h2>
+    <div class="about" style="margin-top:28px">
+      <div>
+        <p>I am an SEO professional with hands-on experience in keyword research, technical SEO, on-page optimization, website auditing, competitor analysis, backlink building, content optimization, and schema markup.</p>
+        <p>I focus on understanding search intent, identifying website issues, and developing practical SEO recommendations that help businesses improve their organic search visibility.</p>
+        <p>I am currently developing my independent SEO consulting practice through professional experience, independent research, and sample SEO projects.</p>
+        <span class="edu">BCA, CT University</span>
+      </div>
+      <div class="hi">
+        <div class="card"><div class="ico p"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></div><h3>SEO Experience</h3></div>
+        <div class="card"><div class="ico b"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div><h3>Technical &amp; On-Page SEO</h3></div>
+        <div class="card"><div class="ico c"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><h3>Independent SEO Projects</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <span class="bar"></span><h2>SEO Services</h2>
+    <p class="lead">Six focus areas, from the technical foundation of a website to the content and links that support it.</p>
+    <div class="cards g3">
+      <div class="card"><div class="ico p"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.2-.5-.5-2.2z"/></svg></div><h3>Technical SEO</h3>
+        <ul class="tick"><li>Crawling and indexability</li><li>Redirect analysis</li><li>XML sitemap and robots.txt review</li><li>Canonical tags</li><li>Schema markup</li></ul></div>
+      <div class="card"><div class="ico b"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Keyword Research</h3>
+        <ul class="tick"><li>Keyword discovery</li><li>Search intent analysis</li><li>Keyword mapping</li><li>Competitor keyword research</li></ul></div>
+      <div class="card"><div class="ico c"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg></div><h3>On-Page SEO</h3>
+        <ul class="tick"><li>Title and meta optimization</li><li>Heading structure</li><li>Content optimization</li><li>Internal linking</li></ul></div>
+      <div class="card"><div class="ico y"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 12l2 2 4-4M9 4V3h6v1"/></svg></div><h3>Website SEO Audit</h3>
+        <ul class="tick"><li>Technical website review</li><li>On-page analysis</li><li>Content gap analysis</li><li>SEO recommendations</li></ul></div>
+      <div class="card"><div class="ico m"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Competitor Analysis</h3>
+        <ul class="tick"><li>Competitor research</li><li>Keyword gap analysis</li><li>Content comparison</li><li>Backlink opportunity research</li></ul></div>
+      <div class="card"><div class="ico p"><svg viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></div><h3>Off-Page SEO</h3>
+        <ul class="tick"><li>Backlink analysis</li><li>Link-building research</li><li>Relevant directory research</li><li>Link profile review</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="projects">
+  <div class="wrap">
+    <span class="bar"></span><h2>Selected SEO Projects</h2>
+    <p class="lead">Independent work I am building to show my process. These are not client projects.</p>
+    <div class="cards g3">
+      <div class="card">
+        <div class="cover" style="background:linear-gradient(135deg,var(--purple),var(--blue))"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <span class="tag" style="background:var(--yellow)">Independent Sample Project</span>
+        <h3>B2B IT Services Website SEO Audit</h3>
+        <p>A sample SEO audit of a publicly accessible B2B IT services website, covering technical SEO, keyword research, competitor analysis, on-page issues, and a proposed 90-day SEO roadmap.</p>
+        <div class="status">Documentation Coming Soon</div>
+      </div>
+      <div class="card">
+        <div class="cover" style="background:linear-gradient(135deg,var(--coral),var(--yellow))"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <span class="tag" style="background:var(--mint)">Independent Research Project</span>
+        <h3>Keyword Research &amp; Competitor Analysis</h3>
+        <p>A structured research project covering search intent, keyword mapping, competitor analysis, and content opportunities.</p>
+        <div class="status">Documentation Coming Soon</div>
+      </div>
+      <div class="card">
+        <div class="cover" style="background:linear-gradient(135deg,var(--mint),var(--blue))"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg></div>
+        <span class="tag" style="background:#FFD1CE">Personal Practice Project</span>
+        <h3>SEO Practice Website</h3>
+        <p>A personal project to demonstrate SEO planning and implementation on a website I own or have permission to manage.</p>
+        <div class="status">Documentation Coming Soon</div>
+      </div>
+    </div>
+    <div class="note">These are planned project concepts until the work and documentation are complete. They are not completed projects or paid client work.</div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <span class="bar"></span><h2>Professional Experience</h2>
+    <div class="tl" style="margin-top:34px">
+      <div class="card job">
+        <h3>SEO Executive</h3><div class="org">Amplivista Web Solutions, Lucknow</div>
+        <ul class="tick two"><li>Keyword research</li><li>Technical SEO</li><li>On-page SEO</li><li>Backlink building</li><li>Competitor analysis</li><li>Website auditing</li><li>Content optimization</li><li>Schema markup</li></ul>
+      </div>
+      <div class="card job i">
+        <h3>SEO Intern</h3><div class="org">Sensation Software Solutions, Mohali</div>
+        <p>Duration: 6 months</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="skills">
+  <div class="wrap">
+    <span class="bar"></span><h2>Skills &amp; Tools</h2>
+    <div class="cards g2" style="margin-top:34px">
+      <div class="card skillcard"><h3 style="margin-top:0">Technical SEO</h3><div class="pills"><span>Crawling</span><span>Indexing</span><span>Canonical Tags</span><span>Redirects</span><span>XML Sitemap</span><span>Robots.txt</span><span>Schema Markup</span></div></div>
+      <div class="card skillcard"><h3 style="margin-top:0">On-Page SEO</h3><div class="pills"><span>Keyword Research</span><span>Search Intent</span><span>Content Optimization</span><span>Internal Linking</span><span>Meta Tags</span></div></div>
+      <div class="card skillcard"><h3 style="margin-top:0">Off-Page SEO</h3><div class="pills"><span>Backlink Research</span><span>Competitor Backlink Analysis</span><span>Link Profile Review</span></div></div>
+      <div class="card skillcard"><h3 style="margin-top:0">Tools</h3><div class="pills"><span>Google Search Console</span><span>Google Analytics 4</span><span>Ahrefs</span><span>Semrush</span><span>Screaming Frog</span><span>Google Keyword Planner</span><span>PageSpeed Insights</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <span class="bar"></span><h2>How I Approach SEO</h2>
+    <div class="steps" style="margin-top:38px">
+      <div class="step"><div class="n p">01</div><h3>Research</h3><p>Understand the business, audience, website, keywords, and competitors.</p></div>
+      <div class="step"><div class="n b">02</div><h3>Audit</h3><p>Identify technical, on-page, content, and off-page opportunities.</p></div>
+      <div class="step"><div class="n c">03</div><h3>Strategy</h3><p>Prioritize SEO recommendations according to business relevance and search intent.</p></div>
+      <div class="step"><div class="n m" style="color:#17233B">04</div><h3>Improve</h3><p>Work on authorized SEO implementation and monitor performance where data access is available.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap contact">
+    <div>
+      <span class="bar"></span>
+      <h2>Let’s Discuss Your SEO Requirements</h2>
+      <p>Looking for help with your website’s SEO? Let’s discuss your website, current challenges, and opportunities to improve organic search visibility.</p>
+      <ul class="cl">
+        <li><div class="ico p"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><small>Email</small><b>[ADD EMAIL ADDRESS]</b></div></li>
+        <li><div class="ico b"><svg viewBox="0 0 24 24"><path d="M6 9v11M6 5v.01M11 20v-6a3 3 0 0 1 6 0v6M11 11v9"/></svg></div><div><small>LinkedIn</small><b>[ADD LINKEDIN URL]</b></div></li>
+        <li><div class="ico m"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><small>Location</small><b>India</b></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <form id="f">
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>Website URL<input name="site" type="url" placeholder="https://"></label>
+        <label>Message<textarea name="msg" required></textarea></label>
+        <button class="btn" type="submit">Send Message</button>
+        <p class="hint">This opens your email app with the message filled in. A Google Form can replace it when you move this design to Google Sites.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div><h3>Tabish Khan</h3><div>SEO Consultant</div></div>
+      <div><h4>Quick links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li>LinkedIn: [ADD LINKEDIN URL]</li><li>Email: [ADD EMAIL ADDRESS]</li></ul></div>
+    </div>
+    <div class="copy">© 2026 Tabish Khan. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var EMAIL="[ADD EMAIL ADDRESS]";
+  var f=document.getElementById("f");
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var d=new FormData(f);
+    var body="Name: "+d.get("name")+"\nEmail: "+d.get("email")+"\nWebsite: "+(d.get("site")||"-")+"\n\n"+d.get("msg");
+    window.location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("SEO enquiry from "+d.get("name"))+"&body="+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
